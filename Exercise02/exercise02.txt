@@ -1,1 +1,106 @@
+Exercise 2 – Exploring LLMs
+1. Current Rank of My Favourite LLMs
+First, my favourite LLM is Claude Opus 5(max). It was developed by Anthropic, because it is strong at reasoning, coding, and detailed technical explanations.
+
+As of 24 August 2026, it is ranked 1st out of 169 models on the Artificial Analysis Intelligence Leadboard, with an Intelligence index score of 63
+
+And I also checked GPT-5.6 Sol (max) by OpenAI; this is ranked 5th on the same  Leadboard, with an Intelligence index score of 61
+
+2. Two New Models Selected
+I selected two LLMs that I had not used before:
+1.Qwen3.8 Max
+It was developed by Alibaba
+Website: chat.qwen.ai
+
+2.DeepSeek V4 Flash 0731(max)
+It was developed by DeepSeek
+Website:chat.deepseek.com
+
+Prompt 1
+Deepseek
+Since you asked again, I'll give you a **fresh, super-concise take** with a different analogy and new examples, so you get a well-rounded view.
+**The Core Difference in One Sentence:**
+
+- **Supervised** = You give the computer **both the questions AND the answers** upfront, so it learns to map one to the other.
+- **Unsupervised** = You give the computer **only the questions** and let it find interesting patterns all by itself.
+
+---
+
+**The Driving Instructor Analogy:**
+
+- **Supervised** is like learning to drive with an instructor who constantly tells you, *"Turn left here,"* *"Brake now,"* *"That's a stop sign."* You learn the rules by matching your actions to their labels. Later, you drive alone and make the right moves.
+- **Unsupervised** is like being dropped into a new city with no map. You drive around and notice, *"Hey, most of the coffee shops are on the east side,"* and *"The roads get busier around 5 PM."* No one told you that—you just spotted the clusters yourself.
+
+---
+
+**Two New Real-World Examples:**
+
+| Type | Real-World Example |
+| :--- | :--- |
+| **Supervised** | **House Price Prediction** – You feed the computer a spreadsheet of 10,000 houses. Each row has features (size, bedrooms, location) AND the actual sale price (the "label"). The computer learns the relationship. When a new house hits the market, it predicts its price. |
+| **Unsupervised** | **News Article Grouping** – A news website feeds thousands of today's articles into a computer without any categories. The computer reads the text and automatically groups them into clusters: sports stories go together, political stories go together, and tech stories go together—all without anyone telling it what "sports" or "politics" means. |
+
+---
+
+**The Ultimate Cheat Sheet:**
+
+- **Supervised** needs **labeled data** (costly, takes human effort).
+- **Unsupervised** uses **unlabeled data** (cheap, plentiful).
+- **Supervised** answers: *"What will happen next?"* (prediction).
+- **Unsupervised** answers: *"What is hidden in here?"* (discovery).data; unsupervised learning finds hidden patterns in unlabelled data.
+ 
+Qwen3.8-Max
+ 
+ 
+Prompt 2
+Write a simple Python program that accepts five numbers from the user 
+and displays their average. Explain the code briefly.
+
+DeepSeek -response
+ 
+### Brief Explanation
+
+| Line(s) | What it does |
+| :--- | :--- |
+| `total = 0` | Creates a variable to keep a running sum of all entered numbers. |
+| `for i in range(1, 6):` | Loops 5 times (i goes from 1 to 5). This lets us ask for each number one by one. |
+| `float(input(f"Enter number {i}: "))` | Takes user input, converts it to a decimal number (so that `3` and `3.5` both work), and stores it in `num`. |
+| `total += num` | Adds the current number to the running total (same as `total = total + num`). |
+| `average = total / 5` | After the loop finishes, divides the sum by 5 to get the average. |
+| `print(...)` | Displays the final average in a clear message. 
+### Example Run
+Enter number 1: 10
+Enter number 2: 20
+Enter number 3: 30
+Enter number 4: 40
+Enter number 5: 50
+The average of the five numbers is: 30.0
+**A small improvement:** If you want to handle the case where the user types text instead of a number, you could add a `try/except` block—but for a simple program, this works perfectly!
+
+
+Qwen3.8-Max response
+
+    ```python
+# Program to find the average of five numbers
+
+total = 0
+
+for i in range(5):
+    num = float(input("Enter number " + str(i + 1) + ": "))
+    total += num
+
+average = total / 5
+
+print("The average is:", average)
+```
+
+### Explanation
+
+- `total = 0` creates a variable to store the sum of the five numbers.
+- The `for` loop runs five times to get five inputs from the user.
+- `float(input(...))` converts the user input into a decimal number.
+- Each number is added to `total`.
+- After the loop, the average is calculated by dividing `total` by `5`.
+- Finally, the result is displayed using `print()`.
+   
 
